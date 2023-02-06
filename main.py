@@ -13,8 +13,8 @@ search_terms = input('Choose your terms (use space as separator ex:bricolage dec
 kw_list = search_terms.split()
 timeframe = input('Choose your timeframe (ex:today 1-m): ')
 pytrend.build_payload(kw_list = kw_list, geo = geo, timeframe = timeframe)
-related_queries= pytrend.related_queries()
-search_terms= [related_queries.get(elem).get('rising') for elem in kw_list]
+related_queries = pytrend.related_queries()
+search_terms = [related_queries.get(elem).get('rising') for elem in kw_list]
 
 for i in range(len(search_terms)):
     search_terms[i].insert(loc=0, column="theme", value=kw_list[i])
