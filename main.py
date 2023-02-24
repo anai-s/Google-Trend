@@ -8,8 +8,8 @@ import pickle
 
 
 pytrend = TrendReq()
-geo = input('Choose your geolocalization (ex:FR): ')
-search_terms = input('Choose your terms (use space as separator ex:bricolage decoration jardin): ')
+geo = input('Choose your geolocalization (ex:US): ')
+search_terms = input('Choose your 5 max keywords (use space as separator ex:milk tea coffee): ')
 kw_list = search_terms.split()
 timeframe = input('Choose your timeframe (ex:today 1-m): ')
 pytrend.build_payload(kw_list = kw_list, geo = geo, timeframe = timeframe)
